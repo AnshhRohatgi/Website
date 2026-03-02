@@ -2,7 +2,7 @@ let cart = [];
 let total = 0;
 
 (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // replace with EmailJS public key
+    emailjs.init("OzqZZaeCycR_Pm8Hv"); // replace with EmailJS public key
 })();
 
 function addToCart(name, price){
