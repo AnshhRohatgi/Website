@@ -46,7 +46,7 @@ function sendOrder(){
         total_price: total
     };
 
-    emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID", templateParams)
+    emailjs.send("service_nqtljqs","template_4zbd6hn", templateParams)
     .then(function(response) {
         alert("Order sent successfully!");
         cart = [];
