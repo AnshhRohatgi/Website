@@ -1,1 +1,74 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undeniable Food</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Undeniable Food</h1>
+    <button onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+</header>
+
+<section class="food-container">
+
+    <div class="food-card">
+        <img src="food1.jpg" id="food1">
+        <h3>Pizza Supreme</h3>
+        <p>₹299</p>
+        <button onclick="addToCart('Pizza Supreme',299)">Add to Cart</button>
+    </div>
+
+    <div class="food-card">
+        <img src="food2.jpg" id="food2">
+        <h3>Cheese Burger</h3>
+        <p>₹199</p>
+        <button onclick="addToCart('Cheese Burger',199)">Add to Cart</button>
+    </div>
+
+    <div class="food-card">
+        <img src="food3.jpg" id="food3">
+        <h3>Pasta Delight</h3>
+        <p>₹249</p>
+        <button onclick="addToCart('Pasta Delight',249)">Add to Cart</button>
+    </div>
+
+    <div class="food-card">
+        <img src="food4.jpg" id="food4">
+        <h3>Fried Chicken</h3>
+        <p>₹349</p>
+        <button onclick="addToCart('Fried Chicken',349)">Add to Cart</button>
+    </div>
+
+    <div class="food-card">
+        <img src="food5.jpg" id="food5">
+        <h3>Chocolate Shake</h3>
+        <p>₹149</p>
+        <button onclick="addToCart('Chocolate Shake',149)">Add to Cart</button>
+    </div>
+
+</section>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <h2>Your Order</h2>
+        <ul id="cart-items"></ul>
+        <h3>Total: ₹<span id="total-price">0</span></h3>
+
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="address" placeholder="Delivery Address" required>
+
+        <button onclick="sendOrder()">Place Order</button>
+        <button onclick="closeCart()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
